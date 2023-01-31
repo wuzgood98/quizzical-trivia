@@ -56,7 +56,7 @@ const Options = () => {
               triviaOptions.categories.map((category) => {
                 const { value, type, id } = category
                 return (
-                  <button type='button' title={value} role="option" key={id} aria-label={type} onClick={() => handleCategory(value, type)} className='font-inter text-sm text-left px-4 py-2 capitalize w-full hover:bg-gray-100 cursor-pointer transition-colors sm:text-base'>{type}</button>
+                  <button type='button' title={type} role="option" key={id} aria-label={type} onClick={() => handleCategory(value, type)} className='font-inter text-sm text-left px-4 py-2 capitalize w-full hover:bg-gray-100 cursor-pointer transition-colors sm:text-base'>{type}</button>
                 )
               })
             }
