@@ -15,6 +15,7 @@ const Question = ({ questionsData }) => {
             role="option"
             aria-selected={answer.selected ? "true" : "false"}
             onClick={() => { selectAnswer(answer.id, questionsData.id) }}
+            aria-disabled={state.answersChecked ? "true" : "false"}
             className={`${handleClassNames(answer, questionsData, state.answersChecked)} ${state.answersChecked && "pointer-events-none"} border-blue200 rounded-xl text-blue300 font-inter text-sm font-medium min-w-[5rem] px-4 py-1 bg-blue100 transition-colors text-justify sm:text-base`}>
             {removeUnicode(answer.item)}
           </button>
