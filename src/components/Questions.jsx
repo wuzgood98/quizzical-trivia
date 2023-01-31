@@ -28,7 +28,7 @@ const Questions = () => {
 
       {!state.answersChecked
         ? (
-          <button type='button' aria-label='Check answers' onClick={checkAnswers} className={`${state.loading && "pointer-events-none"} animate-fadeIn self-center justify-self-end bg-blue200 text-center rounded-xl text-white100 w-full max-w-[10rem] py-4 font-inter text-sm font-semibold tracking-wide mt-5 transition-transform active:scale-95 sm:text-base sm:max-w-[12rem]`}>Check answers</button>
+          <button type='button' aria-label='Check answers' onClick={checkAnswers} aria-disabled={state.loading ? "true" : "false"} className={`${state.loading && "pointer-events-none"} animate-fadeIn self-center justify-self-end bg-blue200 text-center rounded-xl text-white100 w-full max-w-[10rem] py-4 font-inter text-sm font-semibold tracking-wide mt-5 transition-transform active:scale-95 sm:text-base sm:max-w-[12rem]`}>Check answers</button>
         ) : (
           <div className='animate-fadeIn justify-self-end w-full flex flex-col gap-6 justify-center items-center mt-5'>
             <p className="font-inter text-blue300 font-bold text-sm">
